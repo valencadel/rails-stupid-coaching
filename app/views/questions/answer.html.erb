@@ -1,7 +1,19 @@
-<h1>Entrenador de mierda</h1>
-<h2>Questions</h2>
-<p><%= @question %></p>
-<h2>Answer</h2>
-<p><%= @answer %></p>
+<div style="padding-left: 100px">
+  <h1>Respuesta del entrenador</h1>
 
-<%= link_to "Back to Ask!", ask_path %>
+  <div class="container">
+    <div style="border-left: 4px solid #ccc; padding: 10px; margin-bottom: 20px; border-radius: 5px">
+      <p style="font-style: italic;"><%= @question %></p>
+      <p>-  <strong>You</strong></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div style="border-left: 4px solid #ccc; background-color: #fffae6; padding: 10px; border-radius: 5px;">
+      <p><%= @answer %></p>
+      <p>-  <strong>Answer</strong></p>
+    </div>
+  </div>
+
+  <%= link_to "Back to Ask!", ask_path, style: "display: block; margin-top: 20px; text-decoration: none; color: #0066cc;"%>
+</div>
